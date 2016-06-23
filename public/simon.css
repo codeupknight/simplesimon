@@ -1,0 +1,88 @@
+#bodybg {
+  background-color: black; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(#1F1F1F, #333333, #404040); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#1F1F1F, #333333, #404040); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#1F1F1F, #333333, #404040); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#1F1F1F, #333333, #404040); /* Standard syntax */
+}
+.simon {
+	margin-top:20px;
+	width: 75px;
+	padding-left:50px;
+}
+.flare {
+	position: absolute;
+	margin-top:30px;
+	width: 180px;
+	z-index: 1;
+	display: none;
+}
+.laser {
+	position: absolute;
+	margin-top:30px;
+	width: 150px;
+	z-index: 1;
+	display: none;
+}
+.head {
+	margin-top:20px;
+	color:white;
+	text-align: center;
+}
+.head:hover {
+	color:gray;
+}
+
+
+
+/* 7 images in hexagon
+.positionA {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: +250px;
+  margin-top: -50px;
+}
+.positionB {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: +100px;
+  margin-top: +150px;
+}
+.positionC {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: +150px;
+}
+.positionD {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -350px;
+}
+.positionE {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -250px;
+}
+.positionF {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: +100px;
+  margin-top: -250px;
+}
+.positionG {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+*/
