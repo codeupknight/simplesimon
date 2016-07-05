@@ -31,7 +31,6 @@
 		var y = 0;
 		id = setInterval(function () {
 			if (y < sequence.length) {
-				$('.flare').eq(sequence[y]).addClass("flash");
 				$('.flare').eq(sequence[y]).fadeToggle(300);
 				$('.flare').eq(sequence[y]).fadeToggle(500);
 				y++
