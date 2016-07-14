@@ -7,24 +7,20 @@
 	var counter = 0;
 	var inputCounter = 0;
 	var blockInput = true;
-	var roundDisplay = $('.roundDisplay').text;
-	for (i=0;i<simon.length;i++) {
-		simon.eq(i).attr('data-value', i);
-		simon.eq(i).click(simonClick);
-	}
-	for (i=0;i<simon.length;i++) {
-		laser.eq(i).attr('data-invisValue', i);
-	}
-	// pop sequence array
+	var roundDisplay = $('#roundDisplay').text;
+
+	// generate random number
 	function randomNumber () {
 		return Math.floor(Math.random() * ($(".simon").length));
 	};
-	//simon round
-	function simonRound () {
+	
+	//start new simon round
+	function startRound () {
 		sequence.push(randomNumber());
 		inputCounter = 0;
 		flareSequence();
 	}
+
 	//show flares according to sequence array, sets flaring variable to restrict clicks
 	function flareSequence() {
 		blockInput = true;
@@ -41,6 +37,7 @@
 			};
 		}, 1000);
 	}
+
 	//logs user input and sends out laser image when clicked.
 	//restarts if array length is reached. clears and restarts if failed.
 	function simonClick(event) {
@@ -65,16 +62,27 @@
 	    if (value != sequence[inputCounter-1]) {
 	    	console.log("failure. starting new round");
 	    	sequence = [];
-	    	simonRound()
+	    	startRound()
 	    }
 	    if (inputCounter === sequence.length) {
 	        	console.log("winning! starting a new round!")
-	        	simonRound();
+	        	startRound();
 	    } 
 	};
+
 	function simonStart() {
 		sequence = [];
-		simonRound()
+		startRound()
 	}
+
+		//place button listeners
+	for (i=0;i<simon.length;i++) {
+		simon.eq(i).attr('data-value', i);
+		simon.eq(i).click(simonClick);
+	}
+	for (i=0;i<simon.length;i++) {
+		laser.eq(i).attr('data-invisValue', i);
+	}
+
 	$('#title').click(simonStart);
 })();
