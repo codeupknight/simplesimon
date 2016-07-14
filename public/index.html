@@ -10,10 +10,18 @@
 <div>
 	<div>
 		<h1 id="title" class ="head">click here to play simon</h1>
+		<p class="head"><i>Dev note: The animation has not been updated to create multiple flares simultaneously. <br> If the listener is clicked again during the animation, it will register the click but the animation will not occur.</i>
 	</div>
 	<div>
-		<h2 class="head">Score:</h2>
-		<h2 id="roundDisplay" class ="head"></h2>
+		<center>
+		<table class="head">
+			<tr>
+				<td>Round:
+				</td>
+				<td id="roundDisplay">
+				</td>
+			</table>
+		</center>
 	</div>
 	<div>
 		<img class="invisible flare" src="/img/red_flare.png">

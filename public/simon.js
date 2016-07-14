@@ -7,21 +7,23 @@
 	var counter = 0;
 	var inputCounter = 0;
 	var blockInput = true;
-	var roundDisplay = $('#roundDisplay').text;
 
 	// generate random number
 	function randomNumber () {
 		return Math.floor(Math.random() * ($(".simon").length));
 	};
-	
+
 	//start new simon round
 	function startRound () {
+    	counter++;
+	    $("#roundDisplay").text(counter);
 		sequence.push(randomNumber());
 		inputCounter = 0;
 		flareSequence();
 	}
 
-	//show flares according to sequence array, sets flaring variable to restrict clicks
+	//show flares according to sequence array
+	//sets guard to restrict clicks during sequence
 	function flareSequence() {
 		blockInput = true;
 		var y = 0;
@@ -60,7 +62,7 @@
 	        console.log("inputCounter: " + inputCounter + ", sequence length: " + sequence.length + ", last one in the array: " + sequence[sequence.length - 1]);
 	    }
 	    if (value != sequence[inputCounter-1]) {
-	    	console.log("failure. starting new round");
+	    	console.log("failure. starting new game");
 	    	sequence = [];
 	    	startRound()
 	    }
